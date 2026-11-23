@@ -34,5 +34,5 @@ bearing with north fixed at the top.
 ## Deploying
 
 - **Vercel**: import the repo. Vite is detected automatically; no settings needed.
-- **GitHub Pages**: `.github/workflows/pages.yml` builds with `GITHUB_PAGES=1`, which
-  sets the base path to `/yonder/`.
+- **GitHub Pages**: `.github/workflows/pages.yml` builds with `BASE_PATH` set to
+  the repo name, so assets resolve under `/<repo>/`.

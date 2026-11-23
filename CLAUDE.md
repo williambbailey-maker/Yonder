@@ -6,7 +6,7 @@ A Dunwell PWA: enter a city or country, a big arrow points at it. One screen, no
 
 React 19, Vite, TypeScript (strict), Tailwind v4 (`@tailwindcss/vite`, tokens in `src/index.css`),
 `vite-plugin-pwa`. Tests with Vitest. Deployed on Vercel; a GitHub Pages workflow also exists
-(`GITHUB_PAGES=1` switches the Vite base to `/yonder/`).
+(`BASE_PATH` sets the Vite base to `/<repo>/`).
 
 ## Layout
 

@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// GitHub Pages serves from /<repo>/; Vercel serves from the root.
-const base = process.env.GITHUB_PAGES ? '/yonder/' : '/'
+// GitHub Pages serves from /<repo>/ (set via BASE_PATH); Vercel serves from the root.
+const base = process.env.BASE_PATH || '/'
 
 export default defineConfig({
   base,
