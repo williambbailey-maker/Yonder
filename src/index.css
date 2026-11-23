@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+}
+
+:root {
+  --paper: #f2eadb;
+  --card: #fbf6ec;
+  --ink: #1e1b16;
+  --muted: #7d7260;
+  --accent: #d9482b;
+  --line: rgba(30, 27, 22, 0.14);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #171512;
+    --card: #221f1a;
+    --ink: #f2eadb;
+    --muted: #a09582;
+    --accent: #f0603f;
+    --line: rgba(242, 234, 219, 0.16);
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+input {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.safe-top {
+  padding-top: max(1rem, env(safe-area-inset-top));
+}
+.safe-bottom {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.arrow-shape {
+  transition: fill 0.35s ease, stroke 0.35s ease, opacity 0.35s ease;
+}
